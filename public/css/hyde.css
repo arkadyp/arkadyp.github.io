@@ -79,7 +79,7 @@ html {
 .sidebar-about h1 {
   color: #fff;
   margin-top: 0;
-  font-family: "Abril Fatface", serif;
+  font-family: "Arial Bold", serif;
   font-size: 3.25rem;
 }
 
@@ -94,6 +94,7 @@ html {
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
   text-decoration: underline;
+  color: #3C43DB;
 }
 .sidebar-nav-item.active {
   font-weight: bold;
@@ -109,7 +110,7 @@ a.sidebar-nav-item:focus {
   .sidebar-sticky {
     position: absolute;
     right:  1rem;
-    bottom: 1rem;
+    top: 4rem;
     left:   1rem;
   }
 }
