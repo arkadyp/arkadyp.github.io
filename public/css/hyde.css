@@ -32,12 +32,12 @@
  */
 @font-face {
   font-family: MissionGothicLight;
-  src: url('public/fonts/mission/MissionGothicLight.otf');
+  src: url('/public/fonts/mission/MissionGothicLight.otf');
 }
 
 @font-face {
-  font-family: MissionGothicBold;
-  src: url('public/fonts/mission/MissionGothicBold.otf');
+  font-family: MissionGothicRegular;
+  src: url('/public/fonts/mission/MissionGothicRegular.otf');
 }
 
 /*
@@ -80,9 +80,11 @@ html {
 
 .sidebar {
   text-align: center;
-  padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
   background-color: #202020;
+  display: block;
+  position: fixed;
+  float: left;
 }
 @media (min-width: 48rem) {
   .sidebar {
@@ -104,9 +106,14 @@ html {
 .sidebar-about h1 {
   color: #fff;
   margin-top: 0;
-  font-family: MissionGothicBold;
+  font-family: MissionGothicRegular;
   font-size: 2.75rem;
 }
+
+.lower-sidebar {
+  display: table;
+  background-color: rgb(92, 189, 177);
+ }
 
 /* Sidebar nav */
 .sidebar-nav {
