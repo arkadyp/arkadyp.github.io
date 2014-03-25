@@ -26,13 +26,28 @@
 
 
 /*
+ * Fonts
+ *
+ * Adds in custom webfonts
+ */
+@font-face {
+  font-family: MissionGothicLight;
+  src: url('public/fonts/mission/MissionGothicLight.otf');
+}
+
+@font-face {
+  font-family: MissionGothicBold;
+  src: url('public/fonts/mission/MissionGothicBold.otf');
+}
+
+/*
  * Global resets
  *
  * Update the foundational and global aspects of the page.
  */
 
 html {
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: MissionGothicLight, Helvetica, Arial, sans-serif;
 }
 @media (min-width: 48rem) {
   html {
@@ -45,6 +60,16 @@ html {
   }
 }
 
+
+/*
+ * classes + ids
+ *
+ * Added classes/ids
+ */
+ .comic {
+  float: right;
+  padding-right: 1rem;
+ }
 
 /*
  * Sidebar
@@ -79,8 +104,8 @@ html {
 .sidebar-about h1 {
   color: #fff;
   margin-top: 0;
-  font-family: "Arial Bold", serif;
-  font-size: 3.25rem;
+  font-family: MissionGothicBold;
+  font-size: 2.75rem;
 }
 
 /* Sidebar nav */
