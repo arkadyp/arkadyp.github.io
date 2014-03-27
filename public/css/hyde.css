@@ -77,6 +77,7 @@ html {
   border: 2px solid white;
 }
 
+
 /*
  * Sidebar
  *
@@ -117,12 +118,11 @@ html {
     text-align: left;
   }
 
-
-.second {
-    position: fixed;
-    width: 18rem;
-    top: 27rem;
-    bottom: 0;
+  .second {
+      position: fixed;
+      width: 18rem;
+      top: 27rem;
+      bottom: 0;
   }
 }
 
