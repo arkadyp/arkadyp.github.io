@@ -76,6 +76,26 @@ html {
   border: 2px solid white;
 }
 
+/* Sticky sidebar
+ *
+ * Add the `sidebar-sticky` class to the sidebar's container to affix it the
+ * contents to the bottom of the sidebar in tablets and up.
+ */
+
+@media (min-width: 48rem) {
+  .sidebar-sticky {
+    position: absolute;
+    width: 18rem;
+    
+  }
+
+  .sidebar-content {
+    padding-top: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
 /*
  * Sidebar
  *
@@ -106,13 +126,21 @@ html {
     text-align: left;
   }
 
-  .sidebar .accent-color {
+  .sidebar .first .accent-color {
     background-color: #ffa690;
-    top: 75%;
+    top: 0;
     position: fixed;
     width: 18rem;
+    bottom: 50%;
+    left: 0;
+  }
+
+  .sidebar .second {
+    top: 50%;
     bottom: 0;
     left: 0;
+    width: 18rem;
+
   }
 }
 
@@ -150,22 +178,6 @@ a.sidebar-nav-item:focus {
 .sidebar-nav-item.active {
   font-weight: bold;
 }
-
-/* Sticky sidebar
- *
- * Add the `sidebar-sticky` class to the sidebar's container to affix it the
- * contents to the bottom of the sidebar in tablets and up.
- */
-
-@media (min-width: 48rem) {
-  .sidebar-sticky {
-    position: absolute;
-    right:  1rem;
-    top: 4rem;
-    left:   1rem;
-  }
-}
-
 
 /* Container
  *
