@@ -91,6 +91,10 @@ html {
   width: 100%;
 }
 
+.first {
+  padding-top: 10px;
+}
+
 .second {
   background-color: #FFA690;
 }
