@@ -66,10 +66,12 @@ html {
  *
  * Added classes/ids
  */
+
 .comic  {
   float: right;
   padding-right: 1rem;
 }
+
 
 .sidebar-photo {
   border: 2px solid white;
@@ -99,6 +101,7 @@ html {
   background-color: #FFA690;
 }
 
+
 .sidebar-content {
   padding-right: 1rem; 
   padding-left: 1rem;
@@ -114,7 +117,8 @@ html {
     text-align: left;
   }
 
-  .second {
+
+.second {
     position: fixed;
     width: 18rem;
     top: 27rem;
@@ -158,6 +162,7 @@ a.sidebar-nav-item:focus {
   font-weight: bold;
 }
 
+
 /* Sticky sidebar
  *
  * Add the `sidebar-sticky` class to the sidebar's container to affix it the
@@ -170,7 +175,6 @@ a.sidebar-nav-item:focus {
     top: 4rem;
   }
 }
-
 
 /* Container
  *
