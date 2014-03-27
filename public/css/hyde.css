@@ -66,10 +66,14 @@ html {
  *
  * Added classes/ids
  */
- .comic {
+.comic  {
   float: right;
   padding-right: 1rem;
- }
+}
+
+.sidebar-photo {
+  border: 2px solid white;
+}
 
 /*
  * Sidebar
@@ -83,9 +87,17 @@ html {
   color: rgba(255,255,255,.5);
   background-color: #202020;
   display: block;
-  /*position: fixed;*/
   float: top;
   width: 100%;
+}
+
+.second {
+  background-color: #FFA690;
+}
+
+.sidebar-content {
+  padding-right: 1rem; 
+  padding-left: 1rem;
 }
 
 @media (min-width: 48rem) {
@@ -96,6 +108,13 @@ html {
     bottom: 0;
     width: 18rem;
     text-align: left;
+  }
+
+  .second {
+    position: fixed;
+    width: 18rem;
+    top: 60%;
+    bottom: 0;
   }
 }
 
@@ -143,9 +162,7 @@ a.sidebar-nav-item:focus {
 @media (min-width: 48rem) {
   .sidebar-sticky {
     position: absolute;
-    right:  1rem;
     top: 4rem;
-    left:   1rem;
   }
 }
 
