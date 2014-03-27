@@ -66,10 +66,15 @@ html {
  *
  * Added classes/ids
  */
- .comic {
+.comic {
   float: right;
   padding-right: 1rem;
- }
+}
+
+.profile-photo {
+  border-radius: 5%;
+  border: 2px solid white;
+}
 
 /*
  * Sidebar
@@ -86,6 +91,11 @@ html {
   position: fixed;
   float: left;
 }
+
+.sidebar .accent-color {
+  position: relative;
+}
+
 @media (min-width: 48rem) {
   .sidebar {
     position: fixed;
@@ -94,6 +104,15 @@ html {
     bottom: 0;
     width: 18rem;
     text-align: left;
+  }
+
+  .sidebar .accent-color {
+    background-color: #ffa690;
+    top: 75%;
+    position: fixed;
+    width: 18rem;
+    bottom: 0;
+    left: 0;
   }
 }
 
