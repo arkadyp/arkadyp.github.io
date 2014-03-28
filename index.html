@@ -46,9 +46,11 @@ title: Home
 
     var mouseOffset = 0;
     var timer;
-    var r = 90;
-    var g = 180;
-    var b = 270;
+    var r = 70;
+    var g = 70;
+    var b = 125;
+    var direction = 1;
+    var rand;
     $('body').find('.fa').on('mouseenter', function(){
       timer = setInterval(function(){
         this.offset++;
@@ -60,9 +62,16 @@ title: Home
           'transform': 'rotate(' + this.offset + 'deg)',
         });
 
-        r += Math.floor(Math.random() * 3);
-        g += Math.floor(Math.random() * 3);
-        b += Math.floor(Math.random() * 3);
+        rand = Math.floor(Math.random() * 2) * direction;
+        r += rand;
+        g += rand;
+        b += rand;
+        if(b > 255) {
+          direction = -1;
+        } else if(b < 125){
+          direction = 1;
+        }
+
         $(this).css({'color' : 'rgb('+r+', '+g+', '+b+')'});
       }.bind(this), 1);
 
