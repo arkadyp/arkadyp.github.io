@@ -38,11 +38,51 @@ title: Home
 
 <script type="text/javascript">
   $(document).on('ready', function(){
+    //add offsets to icons
+    var icons = $('.fa');
+    for(var i = 0; i < icons.length; i++) {
+      icons[i].offset = 0;
+    }
+
+    var mouseOffset = 0;
+    var timer;
+    var r = 90;
+    var g = 180;
+    var b = 270;
     $('body').find('.fa').on('mouseenter', function(){
-      $(this).addClass('fa-spin')
+      timer = setInterval(function(){
+        this.offset++;
+        $(this).css({
+          '-moz-transform': 'rotate(' + this.offset + 'deg)',
+          '-webkit-transform': 'rotate(' + this.offset + 'deg)',
+          '-o-transform': 'rotate(' + this.offset + 'deg)',
+          '-ms-transform': 'rotate(' + this.offset + 'deg)',
+          'transform': 'rotate(' + this.offset + 'deg)',
+        });
+
+        r += Math.floor(Math.random() * 3);
+        g += Math.floor(Math.random() * 3);
+        b += Math.floor(Math.random() * 3);
+        $(this).css({'color' : 'rgb('+r+', '+g+', '+b+')'});
+      }.bind(this), 1);
+
     });
     $('body').find('.fa').on('mouseleave', function(){
-      $(this).removeClass('fa-spin')
+      clearInterval(timer);
+    });
+ 
+    var scrollOffset;
+    $(window).scroll(function() {
+      scrollOffset = $(window).scrollTop() + mouseOffset;
+      for(var i = 0; i < icons.length; i++) {
+        icons[i].offset += 10;
+        icons[i].style['-moz-transform'] = 'rotate(' + icons[i].offset + 'deg)';
+        icons[i].style['-webkit-transform'] = 'rotate(' + icons[i].offset + 'deg)';
+        icons[i].style['-ms-transform'] = 'rotate(' + icons[i].offset + 'deg)';
+        icons[i].style['-moz-transform'] = 'rotate(' + icons[i].offset + 'deg)';
+        icons[i].style['transform'] = 'rotate(' + icons[i].offset + 'deg)';
+      }
     });
   });
+
 </script>
