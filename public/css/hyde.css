@@ -77,6 +77,43 @@ html {
   border: 2px solid white;
 }
 
+.site-title-displayed span{
+  opacity: 1;
+  color: white;
+}
+
+.site-title-hidden span{
+  opacity: 0.5;
+  color: black;
+}
+
+.site-title-first span, .site-title-second span{
+  transition: opacity 750ms, color 2500ms;
+}
+
+.site-title-first span:nth-child(1)  { transition-delay:  200ms }
+.site-title-first span:nth-child(2)  { transition-delay:  450ms }
+.site-title-first span:nth-child(3)  { transition-delay:  300ms }
+.site-title-first span:nth-child(4)  { transition-delay:  550ms }
+.site-title-first span:nth-child(5)  { transition-delay:  600ms }
+.site-title-first span:nth-child(6)  { transition-delay:  800ms }
+
+.site-title-second span:nth-child(1)  { transition-delay:  450ms }
+.site-title-second span:nth-child(2)  { transition-delay:  200ms }
+.site-title-second span:nth-child(3)  { transition-delay:  150ms }
+.site-title-second span:nth-child(4)  { transition-delay:  600ms }
+.site-title-second span:nth-child(5)  { transition-delay:  300ms }
+.site-title-second span:nth-child(6)  { transition-delay:  240ms }
+
+.site-title-first, .site-title-second > span {
+  padding: 0;
+  display: inline-block;
+}
+
+.site-title-word {
+  white-space: nowrap;
+  display: inline-block;
+}
 
 /*
  * Sidebar
