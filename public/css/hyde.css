@@ -120,6 +120,10 @@ html {
   display: inline-block;
 }
 
+.link-icons, .sidebar-nav-item {
+  transition: -webkit-transform 3000ms;
+}
+
 /*
  * Sidebar
  *
