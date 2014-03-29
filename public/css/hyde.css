@@ -120,7 +120,7 @@ html {
   display: inline-block;
 }
 
-.link-icons, .sidebar-nav-item {
+.spinX {
   transition: -webkit-transform 3000ms;
 }
 
